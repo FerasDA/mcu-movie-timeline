@@ -11,14 +11,27 @@ const movieCard = { background: "red", color: "white" }
 const showCard = { background: "blue", color: "white" }
 
 const Timeline = () => {
-  const data = useStaticQuery(graphql`
-    query allMCUData {
-      allDataJson {
+  // const data = useStaticQuery(graphql`
+  //   query allMCUData {
+  //     allDataJson {
+  //       edges {
+  //         node {
+  //           title
+  //           subTitle
+  //           type
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  const contentfulData = useStaticQuery(graphql`
+    query allContentfulMcuEvent {
+      allContentfulMcuEvent {
         edges {
           node {
             title
             subTitle
-            type
+            isMovie
           }
         }
       }
@@ -28,12 +41,12 @@ const Timeline = () => {
     <>
       <div style={{ backgroundColor: "#000" }}>
         <VerticalTimeline>
-          {data.allDataJson.edges.map(({ node }) => (
+          {contentfulData.allContentfulMcuEvent.edges.map(({ node }) => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={node.type === "movie" ? movieCard : showCard}
+              contentStyle={node.isMovie ? movieCard : showCard}
               date={node.subTitle}
-              iconStyle={node.type === "movie" ? movieCard : showCard}
+              iconStyle={node.isMovie ? movieCard : showCard}
             >
               <h3 className="vertical-timeline-element-title">{node.title}</h3>
             </VerticalTimelineElement>
