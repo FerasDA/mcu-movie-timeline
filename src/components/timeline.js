@@ -18,7 +18,7 @@ const Timeline = () => {
   //         node {
   //           title
   //           subTitle
-  //           type
+  //           isMovie
   //         }
   //       }
   //     }

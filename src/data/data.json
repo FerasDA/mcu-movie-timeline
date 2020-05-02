@@ -1,22 +1,252 @@
 [
   {
-    "title": "Captain America: The First Avenger",
-    "subTitle": "2011",
-    "type": "movie"
-  },
-  {
     "title": "Marvel's Agent Carter",
     "subTitle": "Season 1",
-    "type": "show"
+    "isMovie": false
+  },
+  {
+    "title": "Captain America: The First Avenger",
+    "subTitle": "2011",
+    "isMovie": true
   },
   {
     "title": "Marvel's Agent Carter",
     "subTitle": "Season 2",
-    "type": "show"
+    "isMovie": false
   },
   {
     "title": "Iron Man",
     "subTitle": "2008",
-    "type": "movie"
+    "isMovie": true
+  },
+  {
+    "title": "Iron Man 2",
+    "subTitle": "2010",
+    "isMovie": true
+  },
+  {
+    "title": "The Incredible Hulk",
+    "subTitle": "2008",
+    "isMovie": true
+  },
+  {
+    "title": "Thor",
+    "subTitle": "2011",
+    "isMovie": true
+  },
+  {
+    "title": "The Avengers",
+    "subTitle": "2012",
+    "isMovie": true
+  },
+  {
+    "title": "Spider-Man: Homecoming",
+    "subTitle": "2017",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Inhumans",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's The Punisher",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Jessica Jones",
+    "subTitle": "S2",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Runaways",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Luke Cage",
+    "subTitle": "S2",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Cloak & Dagger",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S3, E20-22",
+    "isMovie": false
+  },
+  {
+    "title": "Black Panther",
+    "subTitle": "2018",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S4, Ghost Rider",
+    "isMovie": false
+  },
+  {
+    "title": "Doctor Strange",
+    "subTitle": "2016",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Runaways",
+    "subTitle": "S2",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S4, LMD",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's The Defenders",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Iron First",
+    "subTitle": "S2",
+    "isMovie": false
+  },
+  {
+    "title": " Marvel's Daredevil",
+    "subTitle": "S3",
+    "isMovie": false
+  },
+  {
+    "title": "Ant-Man and The Wasp",
+    "subTitle": "2018",
+    "isMovie": true
+  },
+  {
+    "title": "Avengers: Endgame",
+    "subTitle": "2019",
+    "isMovie": true
+  },
+  {
+    "title": "Thor: Raganarok",
+    "subTitle": "2017",
+    "isMovie": true
+  },
+  {
+    "title": "Avengers: Infinity War",
+    "subTitle": "2018",
+    "isMovie": true
+  },
+  {
+    "title": "Spider-Man: Far From Home",
+    "subTitle": "2019",
+    "isMovie": true
+  },
+  {
+    "title": "Captain Marvel",
+    "subTitle": "2019",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Jessica Jones",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S3, E11-19",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S2, E20-22",
+    "isMovie": false
+  },
+  {
+    "title": "Ant-Man",
+    "subTitle": "2015",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S3, E1-E10",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Iron Fist",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Captain America: Civil War",
+    "subTitle": "2016",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Luke Cage",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Daredevil",
+    "subTitle": "S2",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S2, E1-19",
+    "isMovie": false
+  },
+  {
+    "title": "Marvel's Daredevil",
+    "subTitle": "S1",
+    "isMovie": false
+  },
+  {
+    "title": "Guardians of the Galaxy Vol.2",
+    "subTitle": "2017",
+    "isMovie": true
+  },
+  {
+    "title": "Avengers: Age of Ultron",
+    "subTitle": "2015",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S1, E8-E16",
+    "isMovie": false
+  },
+  {
+    "title": "Thor: The Dark World",
+    "subTitle": "2013",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S1, E17-22",
+    "isMovie": false
+  },
+  {
+    "title": "Guardians of the Galaxy",
+    "subTitle": "2014",
+    "isMovie": true
+  },
+  {
+    "title": "Iron Man 3",
+    "subTitle": "2013",
+    "isMovie": true
+  },
+  {
+    "title": "Marvel's Agents of S.H.I.E.L.D",
+    "subTitle": "S1, E1-7",
+    "isMovie": false
+  },
+  {
+    "title": "Captain America: The Winter Soldier",
+    "subTitle": "2014",
+    "isMovie": true
   }
 ]
