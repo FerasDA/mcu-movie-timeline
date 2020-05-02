@@ -26,12 +26,17 @@ const Timeline = () => {
   // `)
   const contentfulData = useStaticQuery(graphql`
     query allContentfulMcuEvent {
-      allContentfulMcuEvent {
+      allContentfulMcuEvent(sort: { fields: createdAt, order: ASC }) {
         edges {
           node {
             title
             subTitle
             isMovie
+            img {
+              file {
+                url
+              }
+            }
           }
         }
       }
@@ -49,6 +54,13 @@ const Timeline = () => {
               iconStyle={node.isMovie ? movieCard : showCard}
             >
               <h3 className="vertical-timeline-element-title">{node.title}</h3>
+              {node.img ? (
+                <img
+                  style={{ paddingTop: "50px" }}
+                  alt={node.title}
+                  src={node.img.file.url}
+                />
+              ) : null}
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
