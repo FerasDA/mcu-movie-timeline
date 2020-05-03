@@ -24,17 +24,37 @@ const Timeline = () => {
   //     }
   //   }
   // `)
+  // const contentfulData = useStaticQuery(graphql`
+  //   query allContentfulMcuEvent {
+  //     allContentfulMcuEvent(sort: { fields: createdAt, order: ASC }) {
+  //       edges {
+  //         node {
+  //           title
+  //           subTitle
+  //           isMovie
+  //           img {
+  //             file {
+  //               url
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   const contentfulData = useStaticQuery(graphql`
-    query allContentfulMcuEvent {
-      allContentfulMcuEvent(sort: { fields: createdAt, order: ASC }) {
+    query allContentfulMcuOrderedTimeline {
+      allContentfulMcuOrderedTimeline {
         edges {
           node {
-            title
-            subTitle
-            isMovie
-            img {
-              file {
-                url
+            allTitlesChronologically {
+              title
+              subTitle
+              isMovie
+              img {
+                file {
+                  url
+                }
               }
             }
           }
@@ -42,27 +62,34 @@ const Timeline = () => {
       }
     }
   `)
+
   return (
     <>
       <div style={{ backgroundColor: "#000" }}>
         <VerticalTimeline>
-          {contentfulData.allContentfulMcuEvent.edges.map(({ node }) => (
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={node.isMovie ? movieCard : showCard}
-              date={node.subTitle}
-              iconStyle={node.isMovie ? movieCard : showCard}
-            >
-              <h3 className="vertical-timeline-element-title">{node.title}</h3>
-              {node.img ? (
-                <img
-                  style={{ paddingTop: "50px" }}
-                  alt={node.title}
-                  src={node.img.file.url}
-                />
-              ) : null}
-            </VerticalTimelineElement>
-          ))}
+          {contentfulData.allContentfulMcuOrderedTimeline.edges.map(
+            ({ node }) =>
+              node.allTitlesChronologically.map((event, index) => (
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={event.isMovie ? movieCard : showCard}
+                  date={event.subTitle}
+                  iconStyle={event.isMovie ? movieCard : showCard}
+                  key={index}
+                >
+                  <h3 className="vertical-timeline-element-title">
+                    {event.title}
+                  </h3>
+                  {event.img ? (
+                    <img
+                      style={{ paddingTop: "50px" }}
+                      alt={event.title}
+                      src={event.img.file.url}
+                    />
+                  ) : null}
+                </VerticalTimelineElement>
+              ))
+          )}
         </VerticalTimeline>
       </div>
     </>
